@@ -1,0 +1,17 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploytestnet": "hardhat ignition deploy ./ignition/modules/Sample.ts --network fraxtalTestnet",
+    "deploymainnet": "hardhat ignition deploy ./ignition/modules/Sample.ts --network fraxtalMainnet"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.5"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5"
+  }
+}
