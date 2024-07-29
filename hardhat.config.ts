@@ -3,17 +3,17 @@ import "@nomicfoundation/hardhat-toolbox";
 import "dotenv/config";
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.24",
+  solidity: "0.8.20",
   networks: {
-    fraxtalMainnet: {
-      url: "https://rpc.frax.com",
-      accounts: [`0x${process.env.PRIVATE_KEY}`],
-      chainId: 252,
-    },
-    fraxtalTestnet: {
-      url: "https://rpc.testnet.frax.com",
-      accounts: [`0x${process.env.PRIVATE_KEY}`],
-      chainId: 2522,
+    opencampus: {
+      url: `https://rpc.open-campus-codex.gelato.digital/`,
+      accounts: [process.env.PRIVATE_KEY!],
+      verify: {
+        etherscan: {
+          apiUrl: "https://opencampus-codex.blockscout.com/api",
+          apiKey: "not-needed",
+        },
+      },
     },
   },
 };
